@@ -168,10 +168,10 @@ div#notebook {
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
-<!-- 
-<div class="cell border-box-sizing code_cell rendered">
+
+<!-- <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">options</span><span class="p">(</span>jupyter.plot_mimetypes <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;image/png&#39;</span><span class="p">))</span>
@@ -221,7 +221,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>train_data <span class="o">&lt;-</span> read.csv<span class="p">(</span><span class="s">&#39;trainingData.csv&#39;</span><span class="p">)</span>
@@ -245,7 +245,7 @@ test_data <span class="o">&lt;-</span> read.csv<span class="p">(</span><span cla
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>log_loss <span class="o">=</span> <span class="kr">function</span><span class="p">(</span>actual<span class="p">,</span> predicted<span class="p">,</span> eps <span class="o">=</span> <span class="m">1e-15</span><span class="p">)</span> <span class="p">{</span>  
@@ -271,7 +271,7 @@ test_data <span class="o">&lt;-</span> read.csv<span class="p">(</span><span cla
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">set.seed</span><span class="p">(</span><span class="m">927540672</span><span class="p">)</span>
@@ -293,7 +293,7 @@ test_data <span class="o">&lt;-</span> read.csv<span class="p">(</span><span cla
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>train_data_random <span class="o">&lt;-</span> train_data<span class="p">[</span><span class="kp">sample</span><span class="p">(</span><span class="kp">nrow</span><span class="p">(</span>train_data<span class="p">)),]</span> <span class="c1"># randomize row order</span>
@@ -311,7 +311,7 @@ validate <span class="o">&lt;-</span> train_data_random<span class="p">[(</span>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 TRUE
@@ -334,7 +334,7 @@ TRUE
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kn">library</span><span class="p">(</span>gbm<span class="p">)</span>
@@ -374,7 +374,7 @@ Loaded gbm 2.1.1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>baseline_model <span class="o">&lt;-</span> gbm<span class="p">(</span>
@@ -444,7 +444,7 @@ Loaded gbm 2.1.1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">summary</span><span class="p">(</span>baseline_model<span class="p">,</span> plot <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
@@ -458,7 +458,7 @@ Loaded gbm 2.1.1
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <table>
@@ -491,7 +491,7 @@ Loaded gbm 2.1.1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>num_trees <span class="o">&lt;-</span> gbm.perf<span class="p">(</span>baseline_model<span class="p">,</span> method<span class="o">=</span><span class="s">&#39;test&#39;</span><span class="p">)</span>
@@ -524,7 +524,7 @@ test_pred <span class="o">&lt;-</span> predict<span class="p">(</span>baseline_m
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">cat</span><span class="p">(</span><span class="s">&#39;train average&#39;</span><span class="p">)</span>
@@ -551,7 +551,7 @@ log_loss<span class="p">(</span>validate<span class="o">$</span>response<span cl
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 0.64239654613773
@@ -565,7 +565,7 @@ log_loss<span class="p">(</span>validate<span class="o">$</span>response<span cl
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 0.595459462096326
@@ -579,7 +579,7 @@ log_loss<span class="p">(</span>validate<span class="o">$</span>response<span cl
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 0.637738337004346
@@ -593,7 +593,7 @@ log_loss<span class="p">(</span>validate<span class="o">$</span>response<span cl
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 0.622961715459871
@@ -616,7 +616,7 @@ log_loss<span class="p">(</span>validate<span class="o">$</span>response<span cl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>output_df <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span><span class="s">&#39;inspectionId&#39;</span><span class="o">=</span>test_data<span class="o">$</span>inspectionId<span class="p">,</span> <span class="s">&#39;response&#39;</span><span class="o">=</span>test_pred<span class="p">)</span>
@@ -639,7 +639,7 @@ log_loss<span class="p">(</span>validate<span class="o">$</span>response<span cl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>write.csv<span class="p">(</span>output_df<span class="p">,</span> <span class="s">&#39;baseline_predictions.csv&#39;</span><span class="p">,</span> row.names<span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> quote<span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>

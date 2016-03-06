@@ -209,7 +209,7 @@ div#notebook {
 </div>
 <!-- <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">options</span><span class="p">(</span>jupyter.plot_mimetypes <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="s">&#39;image/png&#39;</span><span class="p">))</span>
@@ -222,7 +222,7 @@ div#notebook {
 </div> -->
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kt">c</span><span class="p">(</span><span class="s">&#39;trainingData.csv&#39;</span><span class="p">,</span> <span class="s">&#39;testingData.csv&#39;</span><span class="p">)</span> <span class="o">%in%</span> <span class="kp">list.files</span><span class="p">()</span>
@@ -236,7 +236,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <ol class=list-inline>
@@ -273,7 +273,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>train <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&#39;trainingData.csv&#39;</span><span class="p">)</span>
@@ -286,7 +286,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">head</span><span class="p">(</span>train<span class="p">)</span>
@@ -300,18 +300,18 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <table>
-<thead><tr><th></th><th scope=col>businessName</th><th scope=col>inspectionId</th><th scope=col>license</th><th scope=col>facilityType</th><th scope=col>risk</th><th scope=col>inspectionDate</th><th scope=col>inspectionType</th><th scope=col>pastFail</th><th scope=col>pastCritical</th><th scope=col>pastSerious</th><th scope=col>⋯</th><th scope=col>fillingStation</th><th scope=col>addressCount</th><th scope=col>wardCount</th><th scope=col>districtCount</th><th scope=col>foodType</th><th scope=col>burglary</th><th scope=col>sanitation</th><th scope=col>garbage</th><th scope=col>rodents</th><th scope=col>response</th></tr></thead>
+<thead><tr><th></th><th scope=col>businessName</th><th scope=col>inspectionId</th><th scope=col>license</th><th scope=col>facilityType</th><th scope=col>risk</th><th scope=col>inspectionDate</th><th scope=col>inspectionType</th><th scope=col>pastFail</th><th scope=col>timeSinceLast</th><th scope=col>licenseStartDate</th><th scope=col>⋯</th><th scope=col>addressCount</th><th scope=col>wardCount</th><th scope=col>districtCount</th><th scope=col>foodType</th><th scope=col>burglary</th><th scope=col>sanitation</th><th scope=col>garbage</th><th scope=col>rodents</th><th scope=col>pastResponse</th><th scope=col>response</th></tr></thead>
 <tbody>
-	<tr><th scope=row>1</th><td>MOBIL FOOD MART</td><td>1229233</td><td>6381</td><td>Other</td><td>Risk 1 (High)</td><td>2012-05-30</td><td>Canvass</td><td>0</td><td>0</td><td>0</td><td><U+22EF></td><td>1</td><td>1</td><td>1</td><td>1</td><td>mart</td><td>59.12217</td><td>9.737389</td><td>10.08283</td><td>32.68577</td><td>0</td></tr>
-	<tr><th scope=row>2</th><td>M HENRIETTA</td><td>1235275</td><td>2037187</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2012-07-11</td><td>Canvass</td><td>0</td><td>0</td><td>0</td><td><U+22EF></td><td>0</td><td>1</td><td>1</td><td>1</td><td>unknown</td><td>34.19799</td><td>22.27188</td><td>6.575097</td><td>35.63598</td><td>0</td></tr>
-	<tr><th scope=row>3</th><td>BARBECUE KING RESTAURANT</td><td>1228106</td><td>32172</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2013-08-19</td><td>Canvass</td><td>0</td><td>1</td><td>0</td><td><U+22EF></td><td>0</td><td>1</td><td>1</td><td>1</td><td>dinner</td><td>24.71013</td><td>9.452417</td><td>23.95876</td><td>19.81711</td><td>0</td></tr>
-	<tr><th scope=row>4</th><td>KENTUCKY FRIED CHICKEN</td><td>545792</td><td>2016979</td><td>Restaurant</td><td>Risk 2 (Medium)</td><td>2012-01-31</td><td>Canvass</td><td>0</td><td>0</td><td>0</td><td><U+22EF></td><td>0</td><td>2</td><td>2</td><td>2</td><td>dinner</td><td>47.69795</td><td>10.97707</td><td>42.40208</td><td>8.539385</td><td>0</td></tr>
-	<tr><th scope=row>5</th><td>HARRY CARAY'S SEVENTH INNING STRETCH</td><td>1227635</td><td>1165412</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2012-10-25</td><td>Canvass</td><td>0</td><td>0</td><td>0</td><td><U+22EF></td><td>0</td><td>1</td><td>1</td><td>1</td><td>unknown</td><td>1.802808</td><td>1.872042</td><td>0.3615867</td><td>1.118123</td><td>0</td></tr>
-	<tr><th scope=row>6</th><td>GAELIC IMPORTS</td><td>670969</td><td>1817934</td><td>Grocery Store</td><td>Risk 1 (High)</td><td>2012-02-29</td><td>Canvass</td><td>0</td><td>0</td><td>0</td><td><U+22EF></td><td>0</td><td>1</td><td>1</td><td>1</td><td>unknown</td><td>11.80463</td><td>1.434802</td><td>16.24232</td><td>1.697097</td><td>0</td></tr>
+	<tr><th scope=row>1</th><td>MOBIL FOOD MART</td><td>1229233</td><td>6381</td><td>Other</td><td>Risk 1 (High)</td><td>2012-05-30</td><td>Canvass</td><td>0</td><td>0.7260274</td><td>2010-06-16</td><td><U+22EF></td><td>1</td><td>1</td><td>1</td><td>mart</td><td>59.12217</td><td>9.737389</td><td>10.08283</td><td>32.68577</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>2</th><td>M HENRIETTA</td><td>1235275</td><td>2037187</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2012-07-11</td><td>Canvass</td><td>0</td><td>1.449315</td><td>2012-06-16</td><td><U+22EF></td><td>1</td><td>1</td><td>1</td><td>unknown</td><td>34.19799</td><td>22.27188</td><td>6.575097</td><td>35.63598</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>3</th><td>BARBECUE KING RESTAURANT</td><td>1228106</td><td>32172</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2013-08-19</td><td>Canvass</td><td>0</td><td>1.043836</td><td>2012-06-16</td><td><U+22EF></td><td>1</td><td>1</td><td>1</td><td>dinner</td><td>24.71013</td><td>9.452417</td><td>23.95876</td><td>19.81711</td><td>1</td><td>0</td></tr>
+	<tr><th scope=row>4</th><td>KENTUCKY FRIED CHICKEN</td><td>545792</td><td>2016979</td><td>Restaurant</td><td>Risk 2 (Medium)</td><td>2012-01-31</td><td>Canvass</td><td>0</td><td>1.989041</td><td>2011-06-16</td><td><U+22EF></td><td>2</td><td>2</td><td>2</td><td>dinner</td><td>47.69795</td><td>10.97707</td><td>42.40208</td><td>8.539385</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>5</th><td>HARRY CARAY'S SEVENTH INNING STRETCH</td><td>1227635</td><td>1165412</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2012-10-25</td><td>Canvass</td><td>0</td><td>0.6191781</td><td>2012-01-16</td><td><U+22EF></td><td>1</td><td>1</td><td>1</td><td>unknown</td><td>1.802808</td><td>1.872042</td><td>0.3615867</td><td>1.118123</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>6</th><td>GAELIC IMPORTS</td><td>670969</td><td>1817934</td><td>Grocery Store</td><td>Risk 1 (High)</td><td>2012-02-29</td><td>Canvass</td><td>0</td><td>0.9178082</td><td>2011-12-16</td><td><U+22EF></td><td>1</td><td>1</td><td>1</td><td>unknown</td><td>11.80463</td><td>1.434802</td><td>16.24232</td><td>1.697097</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
 
@@ -325,7 +325,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>hist<span class="p">(</span>train<span class="o">$</span>rodents<span class="p">,</span> main <span class="o">=</span> <span class="s">&quot;Histogram of rodents&quot;</span><span class="p">,</span> xlab <span class="o">=</span> <span class="s">&quot;rodents&quot;</span><span class="p">)</span>
@@ -355,7 +355,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">summary</span><span class="p">(</span>train<span class="o">$</span>burglary<span class="p">)</span>
@@ -369,7 +369,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -395,7 +395,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>test <span class="o">=</span> read.csv<span class="p">(</span><span class="s">&#39;testingData.csv&#39;</span><span class="p">)</span>
@@ -408,7 +408,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">head</span><span class="p">(</span>test<span class="p">)</span>
@@ -422,18 +422,18 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <table>
-<thead><tr><th></th><th scope=col>businessName</th><th scope=col>inspectionId</th><th scope=col>license</th><th scope=col>facilityType</th><th scope=col>risk</th><th scope=col>inspectionDate</th><th scope=col>inspectionType</th><th scope=col>pastFail</th><th scope=col>pastCritical</th><th scope=col>pastSerious</th><th scope=col>⋯</th><th scope=col>catersLiquorLicense</th><th scope=col>fillingStation</th><th scope=col>addressCount</th><th scope=col>wardCount</th><th scope=col>districtCount</th><th scope=col>foodType</th><th scope=col>burglary</th><th scope=col>sanitation</th><th scope=col>garbage</th><th scope=col>rodents</th></tr></thead>
+<thead><tr><th></th><th scope=col>businessName</th><th scope=col>inspectionId</th><th scope=col>license</th><th scope=col>facilityType</th><th scope=col>risk</th><th scope=col>inspectionDate</th><th scope=col>inspectionType</th><th scope=col>pastFail</th><th scope=col>timeSinceLast</th><th scope=col>licenseStartDate</th><th scope=col>⋯</th><th scope=col>fillingStation</th><th scope=col>addressCount</th><th scope=col>wardCount</th><th scope=col>districtCount</th><th scope=col>foodType</th><th scope=col>burglary</th><th scope=col>sanitation</th><th scope=col>garbage</th><th scope=col>rodents</th><th scope=col>pastResponse</th></tr></thead>
 <tbody>
-	<tr><th scope=row>1</th><td>1155 CAFE</td><td>1319523</td><td>33354</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2013-05-06</td><td>Canvass</td><td>0</td><td>0</td><td>0</td><td><U+22EF></td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>breakfast</td><td>4.539479</td><td>2.194615</td><td>0.08521167</td><td>0.2869405</td></tr>
-	<tr><th scope=row>2</th><td>13 PINS TAPAS & GRILL</td><td>1271208</td><td>2048477</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2012-06-04</td><td>Canvass</td><td>1</td><td>0</td><td>0</td><td><U+22EF></td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>dinner</td><td>32.90828</td><td>25.62997</td><td>3.250397</td><td>13.90169</td></tr>
-	<tr><th scope=row>3</th><td>1.61 AND THE BAR10DOORS</td><td>659700</td><td>2013819</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2011-12-14</td><td>Canvass</td><td>0</td><td>2</td><td>1</td><td><U+22EF></td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>unknown</td><td>19.47614</td><td>10.04346</td><td>10.76347</td><td>1.926003</td></tr>
-	<tr><th scope=row>4</th><td>175 SOPRAFFINA MARKET CAFFE LLC</td><td>614596</td><td>1422648</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2011-11-09</td><td>Canvass</td><td>0</td><td>0</td><td>0</td><td><U+22EF></td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>grocery</td><td>8.399749</td><td>15.91642</td><td>2.287572e-05</td><td>11.37741</td></tr>
-	<tr><th scope=row>5</th><td>#1 CHOP SUEY</td><td>1271460</td><td>1970042</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2012-11-30</td><td>Canvass</td><td>0</td><td>0</td><td>0</td><td><U+22EF></td><td>0</td><td>0</td><td>2</td><td>2</td><td>2</td><td>asian</td><td>9.711408</td><td>9.794065</td><td>11.26204</td><td>12.46986</td></tr>
-	<tr><th scope=row>6</th><td>1ST UNITED METHODIST CHURCH OF CHICAGO AID SOCIETY</td><td>567589</td><td>1737191</td><td>Other</td><td>Risk 1 (High)</td><td>2011-09-01</td><td>Canvass</td><td>0</td><td>0</td><td>0</td><td><U+22EF></td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>unknown</td><td>6.323207</td><td>17.63253</td><td>2.346823e-05</td><td>7.294128</td></tr>
+	<tr><th scope=row>1</th><td>1155 CAFE</td><td>1319523</td><td>33354</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2013-05-06</td><td>Canvass</td><td>0</td><td>1.093151</td><td>2011-07-16</td><td><U+22EF></td><td>0</td><td>1</td><td>1</td><td>1</td><td>breakfast</td><td>4.539479</td><td>2.194615</td><td>0.08521167</td><td>0.2869405</td><td>0</td></tr>
+	<tr><th scope=row>2</th><td>13 PINS TAPAS & GRILL</td><td>1271208</td><td>2048477</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2012-06-04</td><td>Canvass</td><td>1</td><td>0.03287671</td><td>2010-09-24</td><td><U+22EF></td><td>0</td><td>1</td><td>1</td><td>1</td><td>dinner</td><td>32.90828</td><td>25.62997</td><td>3.250397</td><td>13.90169</td><td>0</td></tr>
+	<tr><th scope=row>3</th><td>1.61 AND THE BAR10DOORS</td><td>659700</td><td>2013819</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2011-12-14</td><td>Canvass</td><td>0</td><td>1.632877</td><td>2010-05-05</td><td><U+22EF></td><td>0</td><td>1</td><td>1</td><td>1</td><td>unknown</td><td>19.47614</td><td>10.04346</td><td>10.76347</td><td>1.926003</td><td>1</td></tr>
+	<tr><th scope=row>4</th><td>175 SOPRAFFINA MARKET CAFFE LLC</td><td>614596</td><td>1422648</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2011-11-09</td><td>Canvass</td><td>0</td><td>0.7260274</td><td>2010-04-16</td><td><U+22EF></td><td>0</td><td>1</td><td>1</td><td>1</td><td>grocery</td><td>8.399749</td><td>15.91642</td><td>2.287572e-05</td><td>11.37741</td><td>0</td></tr>
+	<tr><th scope=row>5</th><td>#1 CHOP SUEY</td><td>1271460</td><td>1970042</td><td>Restaurant</td><td>Risk 1 (High)</td><td>2012-11-30</td><td>Canvass</td><td>0</td><td>0.6027397</td><td>2011-08-16</td><td><U+22EF></td><td>0</td><td>2</td><td>2</td><td>2</td><td>asian</td><td>9.711408</td><td>9.794065</td><td>11.26204</td><td>12.46986</td><td>0</td></tr>
+	<tr><th scope=row>6</th><td>1ST UNITED METHODIST CHURCH OF CHICAGO AID SOCIETY</td><td>567589</td><td>1737191</td><td>Other</td><td>Risk 1 (High)</td><td>2011-09-01</td><td>Canvass</td><td>0</td><td>0.8794521</td><td>2010-03-16</td><td><U+22EF></td><td>0</td><td>1</td><td>1</td><td>1</td><td>unknown</td><td>6.323207</td><td>17.63253</td><td>2.346823e-05</td><td>7.294128</td><td>0</td></tr>
 </tbody>
 </table>
 
@@ -447,7 +447,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>plot<span class="p">(</span>density<span class="p">(</span>train<span class="o">$</span>garbage<span class="p">),</span> main <span class="o">=</span> <span class="s">&quot;Density of garbage&quot;</span><span class="p">)</span>
@@ -477,10 +477,42 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">dim</span><span class="p">(</span>train<span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<ol class=list-inline>
+	<li>9652</li>
+	<li>41</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span class="kp">dim</span><span class="p">(</span>test<span class="p">)</span>
 </pre></div>
 
 </div>
@@ -495,40 +527,8 @@ div#notebook {
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <ol class=list-inline>
-	<li>9652</li>
-	<li>43</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-r"><pre><span class="kp">dim</span><span class="p">(</span>test<span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<ol class=list-inline>
 	<li>2414</li>
-	<li>42</li>
+	<li>40</li>
 </ol>
 
 </div>
@@ -551,7 +551,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">names</span><span class="p">(</span>train<span class="p">)[</span><span class="kp">which</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="kp">names</span><span class="p">(</span>train<span class="p">)</span> <span class="o">%in%</span> <span class="kp">names</span><span class="p">(</span>test<span class="p">)))]</span>
@@ -565,7 +565,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 "response"
@@ -598,7 +598,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>numberOfObservationsInTestSet <span class="o">=</span> <span class="kp">nrow</span><span class="p">(</span>test<span class="p">)</span>
@@ -614,12 +614,12 @@ vectorOfPredictions <span class="o">=</span> runif<span class="p">(</span>number
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-0.0003334 0.2512000 0.5203000 0.5117000 0.7713000 0.9998000 </pre>
+0.0007636 0.2687000 0.5142000 0.5097000 0.7554000 0.9997000 </pre>
 </div>
 
 </div>
@@ -630,7 +630,7 @@ vectorOfPredictions <span class="o">=</span> runif<span class="p">(</span>number
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>outputDataSet <span class="o">=</span> <span class="kt">data.frame</span><span class="p">(</span><span class="s">&quot;RowNumber&quot;</span> <span class="o">=</span> <span class="m">1</span><span class="o">:</span>numberOfObservationsInTestSet<span class="p">,</span>
@@ -654,7 +654,7 @@ vectorOfPredictions <span class="o">=</span> runif<span class="p">(</span>number
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span class="kp">head</span><span class="p">(</span>outputDataSet<span class="p">)</span>
@@ -668,18 +668,18 @@ vectorOfPredictions <span class="o">=</span> runif<span class="p">(</span>number
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <table>
 <thead><tr><th></th><th scope=col>RowNumber</th><th scope=col>ProbabilityOfResponse</th></tr></thead>
 <tbody>
-	<tr><th scope=row>1</th><td>1</td><td>0.0256377</td></tr>
-	<tr><th scope=row>2</th><td>2</td><td>0.8170364</td></tr>
-	<tr><th scope=row>3</th><td>3</td><td>0.6864403</td></tr>
-	<tr><th scope=row>4</th><td>4</td><td>0.9129638</td></tr>
-	<tr><th scope=row>5</th><td>5</td><td>0.02623076</td></tr>
-	<tr><th scope=row>6</th><td>6</td><td>0.7480741</td></tr>
+	<tr><th scope=row>1</th><td>1</td><td>0.7508054</td></tr>
+	<tr><th scope=row>2</th><td>2</td><td>0.843956</td></tr>
+	<tr><th scope=row>3</th><td>3</td><td>0.6092726</td></tr>
+	<tr><th scope=row>4</th><td>4</td><td>0.07843369</td></tr>
+	<tr><th scope=row>5</th><td>5</td><td>0.3174228</td></tr>
+	<tr><th scope=row>6</th><td>6</td><td>0.8358421</td></tr>
 </tbody>
 </table>
 
@@ -703,7 +703,7 @@ vectorOfPredictions <span class="o">=</span> runif<span class="p">(</span>number
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre>write.csv<span class="p">(</span>outputDataSet<span class="p">,</span> <span class="s">&quot;submissionExample.csv&quot;</span><span class="p">,</span> row.names <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
