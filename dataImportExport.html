@@ -619,7 +619,7 @@ vectorOfPredictions <span class="o">=</span> runif<span class="p">(</span>number
 
 <div class="output_text output_subarea output_execute_result">
 <pre>     Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
-0.0007636 0.2687000 0.5142000 0.5097000 0.7554000 0.9997000 </pre>
+0.0002077 0.2382000 0.4834000 0.4892000 0.7331000 0.9999000 </pre>
 </div>
 
 </div>
@@ -633,8 +633,8 @@ vectorOfPredictions <span class="o">=</span> runif<span class="p">(</span>number
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre>outputDataSet <span class="o">=</span> <span class="kt">data.frame</span><span class="p">(</span><span class="s">&quot;RowNumber&quot;</span> <span class="o">=</span> <span class="m">1</span><span class="o">:</span>numberOfObservationsInTestSet<span class="p">,</span>
-                           <span class="s">&quot;ProbabilityOfResponse&quot;</span> <span class="o">=</span> vectorOfPredictions<span class="p">)</span>
+<div class=" highlight hl-r"><pre>outputDataSet <span class="o">=</span> <span class="kt">data.frame</span><span class="p">(</span><span class="s">&quot;inspectionId&quot;</span> <span class="o">=</span> test<span class="o">$</span>inspectionId<span class="p">,</span>
+                           <span class="s">&quot;response&quot;</span> <span class="o">=</span> vectorOfPredictions<span class="p">)</span>
 </pre></div>
 
 </div>
@@ -672,14 +672,14 @@ vectorOfPredictions <span class="o">=</span> runif<span class="p">(</span>number
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <table>
-<thead><tr><th></th><th scope=col>RowNumber</th><th scope=col>ProbabilityOfResponse</th></tr></thead>
+<thead><tr><th></th><th scope=col>inspectionId</th><th scope=col>response</th></tr></thead>
 <tbody>
-	<tr><th scope=row>1</th><td>1</td><td>0.7508054</td></tr>
-	<tr><th scope=row>2</th><td>2</td><td>0.843956</td></tr>
-	<tr><th scope=row>3</th><td>3</td><td>0.6092726</td></tr>
-	<tr><th scope=row>4</th><td>4</td><td>0.07843369</td></tr>
-	<tr><th scope=row>5</th><td>5</td><td>0.3174228</td></tr>
-	<tr><th scope=row>6</th><td>6</td><td>0.8358421</td></tr>
+	<tr><th scope=row>1</th><td>1319523</td><td>0.5444173</td></tr>
+	<tr><th scope=row>2</th><td>1271208</td><td>0.03295265</td></tr>
+	<tr><th scope=row>3</th><td>659700</td><td>0.1053927</td></tr>
+	<tr><th scope=row>4</th><td>614596</td><td>0.1299841</td></tr>
+	<tr><th scope=row>5</th><td>1271460</td><td>0.398189</td></tr>
+	<tr><th scope=row>6</th><td>567589</td><td>0.5035713</td></tr>
 </tbody>
 </table>
 
